@@ -1,0 +1,65 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Container styling */
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Paragraph styling */
+p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* Countdown styling */
+.countdown {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.countdown div {
+    background: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 4px;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    width: 80px;
+}
+
+/* Contact link styling */
+.contact a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
