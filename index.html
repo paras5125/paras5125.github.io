@@ -7,23 +7,32 @@
     <link rel="stylesheet" href="website.css">
 </head>
 <body>
-    <div class="container">
-        <h1>We're Launching Soon!</h1>
-        <p>Our website is coming soon. Stay tuned for updates.</p>
-        <div class="countdown">
-            <div id="days">00</div>
-            <div id="hours">00</div>
-            <div id="minutes">00</div>
-            <div id="seconds">00</div>
+    <div class="parallax-container">
+        <div class="parallax" id="parallax-bg"></div>
+        <div class="content">
+            <h1>We're Launching Soon!</h1>
+            <p>Exciting things are coming your way. Stay tuned!</p>
+            <div class="countdown">
+                <div id="days">00</div>
+                <div id="hours">00</div>
+                <div id="minutes">00</div>
+                <div id="seconds">00</div>
+            </div>
+            <p class="contact">Contact us at <a href="mailto:info@example.com">ben10@cartoonnetwork.com</a></p>
         </div>
-        <p class="contact">Contact us at <a href="mailto:info@example.com">info@example.com</a></p>
     </div>
 
     <script>
-        // Set the date we're counting down to
+        // Parallax Effect
+        window.addEventListener('scroll', function() {
+            const parallax = document.getElementById('parallax-bg');
+            let scrollPosition = window.pageYOffset;
+            parallax.style.backgroundPositionY = -(scrollPosition * 0.5) + 'px';
+        });
+
+        // Countdown Timer
         var countDownDate = new Date("Dec 31, 2024 23:59:59").getTime();
 
-        // Update the count down every 1 second
         var x = setInterval(function() {
             var now = new Date().getTime();
             var distance = countDownDate - now;
@@ -38,7 +47,6 @@
             document.getElementById("minutes").innerHTML = minutes;
             document.getElementById("seconds").innerHTML = seconds;
 
-            // If the count down is over, write some text
             if (distance < 0) {
                 clearInterval(x);
                 document.querySelector(".countdown").innerHTML = "We've Launched!";
